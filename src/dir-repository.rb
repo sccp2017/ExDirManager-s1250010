@@ -1,3 +1,4 @@
+require "fileutils"
 # coding: utf-8
 class DirRepository
   # 仕様を見てコードを追加
@@ -12,12 +13,13 @@ class DirRepository
 
   # メソッドの中身のコードを追加
   def make
-    
+    FileUtils.mkdir_p(create_directories , :mode => 705)
   end
 
   def create_directories
-    
+    arr = (1..@num)
+    arr.map{|x| x = dir_name + "/" + @header + "%02d" % x.to_s}
   end
 end
 
-# dir = DirRepository.new("RbTest" , "rb" , 10)
+dir = DirRepository.new("RbTest" , "rb" , 10).make
