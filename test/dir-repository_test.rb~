@@ -1,0 +1,16 @@
+require 'test/unit'
+require_relative '../src/dir-repository'
+# コードを追加
+
+class DirRepositoryTest < Test::Unit::TestCase
+  def test_constructor
+    # コードを追加
+    dir_generator = DirRepository.new("RbTest", "rb", )
+    assert_equal "RbTest", dir_generator.dir_name
+    assert_equal "rb", dir_generator.header
+  end
+
+  def test_create_directories
+    dir_generator = DirRepository.new("RbTest", "rb", 10)
+    assert_equal dir_generater.createirectories , 10
+end
