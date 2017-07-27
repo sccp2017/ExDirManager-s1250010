@@ -1,3 +1,4 @@
+# coding: utf-8
 require "fileutils"
 # coding: utf-8
 class DirRepository
@@ -22,4 +23,4 @@ class DirRepository
   end
 end
 
-dir = DirRepository.new("RbTest" , "rb" , 10).make
+# dir = DirRepository.new("RbTest" , "rb" , 10).make
