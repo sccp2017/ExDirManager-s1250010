@@ -3,7 +3,7 @@ require "fileutils"
 # coding: utf-8
 class DirRepository
   # 仕様を見てコードを追加
-  attr_reader :dir_name, :header, :num
+  # attr_reader :dir_name, :header, :num
 
   # 仕様を見てコードを追加
   def initialize(dir_name, header, num)
@@ -19,7 +19,7 @@ class DirRepository
 
   def create_directories
     arr = (1..@num)
-    arr.map{|x| x = dir_name + "/" + @header + "%02d" % x.to_s}
+    arr.map{|x| x = @dir_name + "/" + @header + "%02d" % x.to_s}
   end
 end
 

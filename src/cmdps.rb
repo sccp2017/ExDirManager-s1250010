@@ -1,3 +1,5 @@
+require_relative "cmd.rb"
+
 class Command_parser
 
   def initialize(arr)
@@ -8,5 +10,5 @@ class Command_parser
     hash = Hash[*@argv]
     Command.new(hash["generate"] , hash["-h"] , hash["-m"])
   end
-  
+
 end
